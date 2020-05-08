@@ -18,7 +18,7 @@ public class CustomersDaoImpl implements  CustomersDao {
     public void saveCustomer(Customer customer) {
 
         Session session = sessionFactory.getCurrentSession();
-        session.save(customer);
+        session.saveOrUpdate(customer);
     }
 
     @Override
@@ -32,4 +32,12 @@ public class CustomersDaoImpl implements  CustomersDao {
         return customers;
 
     }
+
+    @Override
+    public Customer getCustomer(int id) {
+        Session session = sessionFactory.getCurrentSession();
+        Customer customer = session.get(Customer.class,id);
+        return customer;
+    }
+
 }
