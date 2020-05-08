@@ -11,9 +11,15 @@ import java.util.List;
 @Service
 public class CustomerServiceImp implements CustomerService {
 
+
     @Autowired
     private CustomersDao  customersDao;
 
+    @Override
+    @Transactional
+    public void deleteCustomer(int id) {
+        customersDao.deleteCustomer(id);
+    }
     @Override
     @Transactional
     public List<Customer> getCustomers() {
