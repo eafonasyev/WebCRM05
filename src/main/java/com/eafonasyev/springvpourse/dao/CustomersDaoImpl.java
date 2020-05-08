@@ -15,12 +15,18 @@ public class CustomersDaoImpl implements  CustomersDao {
     private SessionFactory sessionFactory;
 
     @Override
-    @Transactional
+    public void saveCustomer(Customer customer) {
+
+        Session session = sessionFactory.getCurrentSession();
+        session.save(customer);
+    }
+
+    @Override
     public List<Customer> getCustomers() {
         //get current hibernate session
         Session session = sessionFactory.getCurrentSession();
         //create query
-        Query<Customer> query = session.createQuery("from Customer",Customer.class);
+        Query<Customer> query = session.createQuery("from Customer order by lastName",Customer.class);
         //execute query abd get result
         List<Customer> customers = query.getResultList();
         return customers;

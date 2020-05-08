@@ -1,10 +1,10 @@
-package com.eafonasyev.springvpourse.dao;
+package com.eafonasyev.springvpourse.service;
 
 import com.eafonasyev.springvpourse.entity.Customer;
 
 import java.util.List;
 
-public interface CustomersDao {
+public interface CustomerService {
     public List<Customer> getCustomers();
 
     void saveCustomer(Customer customer);
