@@ -2,23 +2,14 @@
 <project version="4">
   <component name="dataSourceStorageLocal">
     <data-source name="@localhost" uuid="3beb5853-d21d-449b-add5-d4ffd369b67b">
-      <database-info product="Oracle" version="Oracle Database 12c Enterprise Edition Release 12.2.0.1.0 - 64bit Production" jdbc-version="4.2" driver-name="Oracle JDBC driver" driver-version="12.2.0.1.0">
-        <extra-name-characters>$#</extra-name-characters>
-        <identifier-quote-string>&quot;</identifier-quote-string>
-      </database-info>
-      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
-      <user-name>springuser</user-name>
-      <introspection-schemas>*:SPRINGUSER</introspection-schemas>
-    </data-source>
-    <data-source name="@localhost [2]" uuid="c6c86b3a-ab98-41dd-b274-965d34003713">
-      <database-info product="Oracle" version="Oracle Database 12c Enterprise Edition Release 12.2.0.1.0 - 64bit Production" jdbc-version="4.2" driver-name="Oracle JDBC driver" driver-version="12.2.0.1.0">
+      <database-info product="Oracle" version="Oracle Database 18c Express Edition Release 18.0.0.0.0 - Production" jdbc-version="4.2" driver-name="Oracle JDBC driver" driver-version="12.2.0.1.0">
         <extra-name-characters>$#</extra-name-characters>
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <user-name>HPSTUDENT</user-name>
-      <introspection-schemas>*:HPSTUDENT</introspection-schemas>
+      <user-name>springstudent</user-name>
+      <introspection-schemas>*:SPRINGSTUDENT,SPRINGUSER</introspection-schemas>
     </data-source>
   </component>
 </project>
